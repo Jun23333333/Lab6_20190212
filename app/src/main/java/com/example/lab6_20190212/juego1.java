@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -173,16 +174,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -222,16 +216,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -263,16 +250,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -312,16 +292,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -371,16 +344,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -420,16 +386,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -460,16 +419,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -510,16 +462,9 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -557,18 +502,12 @@ public class juego1 extends AppCompatActivity {
                     && imageViewUrlMap.get(imagen6).equals(Url6)
                     && imageViewUrlMap.get(imagen7).equals(Url7)
                     && imageViewUrlMap.get(imagen8).equals(Url8)){
-                gana.setVisibility(View.VISIBLE);
-                imagen1.setEnabled(false);
-                imagen2.setEnabled(false);
-                imagen3.setEnabled(false);
-                imagen4.setEnabled(false);
-                imagen5.setEnabled(false);
-                imagen6.setEnabled(false);
-                imagen7.setEnabled(false);
-                imagen8.setEnabled(false);
-                imagen9.setEnabled(false);
+                Toast.makeText(this, "Culminaste el juego", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 
     public byte[] bitmapToByteArray(Bitmap bitmap) {
@@ -594,12 +533,10 @@ public class juego1 extends AppCompatActivity {
     }
 
     public void uploadImagePiece(byte[] data, String path) {
-        progressDialog.setMessage("dividiendo");
-        progressDialog.show();
+        ProgressBar progressBar = findViewById(R.id.progress_bar);
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReference();
         StorageReference pieceRef = storageRef.child(path);
-
         UploadTask uploadTask = pieceRef.putBytes(data);
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
@@ -613,7 +550,6 @@ public class juego1 extends AppCompatActivity {
                 // ...
             }
         });
-        progressDialog.dismiss();
     }
     private void uploadPhoto() {
         Intent i = new Intent(Intent.ACTION_PICK);
