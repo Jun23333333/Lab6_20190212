@@ -32,6 +32,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class juego1 extends AppCompatActivity {
@@ -121,7 +122,23 @@ public class juego1 extends AppCompatActivity {
 
         comenzar.setOnClickListener(view -> {
             imageView.setVisibility(View.GONE);
-            juego1(imageViewUrlMap);
+            Random rand = new Random();
+            int numeroAleatorio = rand.nextInt(5) + 1;
+            if(numeroAleatorio == 1){
+                juego1(imageViewUrlMap);
+            } else if (numeroAleatorio == 2) {
+                juego2(imageViewUrlMap);
+            }
+            else if (numeroAleatorio == 3) {
+                juego3(imageViewUrlMap);
+            }
+            else if (numeroAleatorio == 4) {
+                juego4(imageViewUrlMap);
+            }
+            else if (numeroAleatorio == 5) {
+                juego5(imageViewUrlMap);
+            }
+
         });
 
         TextView gana = findViewById(R.id.contador2);
@@ -135,11 +152,9 @@ public class juego1 extends AppCompatActivity {
                 imagen2.setVisibility(View.VISIBLE);
                 imagen1.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen1,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
+
             }
             if(imageViewUrlMap.get(imagen4).equals("1")){
                 imageViewUrlMap.put(imagen4,imageViewUrlMap.get(imagen1));
@@ -147,11 +162,8 @@ public class juego1 extends AppCompatActivity {
                 imagen4.setVisibility(View.VISIBLE);
                 imagen1.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen1,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -181,11 +193,8 @@ public class juego1 extends AppCompatActivity {
                 imagen1.setVisibility(View.VISIBLE);
                 imagen2.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen2,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen5).equals("1")){
                 imageViewUrlMap.put(imagen5,imageViewUrlMap.get(imagen2));
@@ -193,11 +202,8 @@ public class juego1 extends AppCompatActivity {
                 imagen5.setVisibility(View.VISIBLE);
                 imagen2.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen2,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen3).equals("1")){
                 imageViewUrlMap.put(imagen3,imageViewUrlMap.get(imagen2));
@@ -205,11 +211,8 @@ public class juego1 extends AppCompatActivity {
                 imagen3.setVisibility(View.VISIBLE);
                 imagen2.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen2,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -240,11 +243,8 @@ public class juego1 extends AppCompatActivity {
                 imagen2.setVisibility(View.VISIBLE);
                 imagen3.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen3,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen6).equals("1")){
                 imageViewUrlMap.put(imagen6,imageViewUrlMap.get(imagen3));
@@ -252,11 +252,8 @@ public class juego1 extends AppCompatActivity {
                 imagen6.setVisibility(View.VISIBLE);
                 imagen3.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen3,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -286,11 +283,8 @@ public class juego1 extends AppCompatActivity {
                 imagen1.setVisibility(View.VISIBLE);
                 imagen4.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen4,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen5).equals("1")){
                 imageViewUrlMap.put(imagen5,imageViewUrlMap.get(imagen4));
@@ -298,23 +292,17 @@ public class juego1 extends AppCompatActivity {
                 imagen5.setVisibility(View.VISIBLE);
                 imagen4.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen4,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen7).equals("1")){
-                imageViewUrlMap.put(imagen3,imageViewUrlMap.get(imagen4));
+                imageViewUrlMap.put(imagen7,imageViewUrlMap.get(imagen4));
                 Picasso.get().load(imageViewUrlMap.get(imagen4)).into(imagen7);
                 imagen7.setVisibility(View.VISIBLE);
                 imagen4.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen4,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -345,11 +333,8 @@ public class juego1 extends AppCompatActivity {
                 imagen2.setVisibility(View.VISIBLE);
                 imagen5.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen5,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen4).equals("1")){
                 imageViewUrlMap.put(imagen4,imageViewUrlMap.get(imagen5));
@@ -357,11 +342,8 @@ public class juego1 extends AppCompatActivity {
                 imagen4.setVisibility(View.VISIBLE);
                 imagen5.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen5,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen6).equals("1")){
                 imageViewUrlMap.put(imagen6,imageViewUrlMap.get(imagen5));
@@ -369,11 +351,8 @@ public class juego1 extends AppCompatActivity {
                 imagen6.setVisibility(View.VISIBLE);
                 imagen5.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen5,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen8).equals("1")){
                 imageViewUrlMap.put(imagen8,imageViewUrlMap.get(imagen5));
@@ -381,11 +360,8 @@ public class juego1 extends AppCompatActivity {
                 imagen8.setVisibility(View.VISIBLE);
                 imagen5.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen5,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -415,11 +391,8 @@ public class juego1 extends AppCompatActivity {
                 imagen3.setVisibility(View.VISIBLE);
                 imagen6.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen6,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen5).equals("1")){
                 imageViewUrlMap.put(imagen5,imageViewUrlMap.get(imagen6));
@@ -427,11 +400,8 @@ public class juego1 extends AppCompatActivity {
                 imagen5.setVisibility(View.VISIBLE);
                 imagen6.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen6,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen9).equals("1")){
                 imageViewUrlMap.put(imagen9,imageViewUrlMap.get(imagen6));
@@ -439,11 +409,8 @@ public class juego1 extends AppCompatActivity {
                 imagen9.setVisibility(View.VISIBLE);
                 imagen6.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen6,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -473,11 +440,8 @@ public class juego1 extends AppCompatActivity {
                 imagen4.setVisibility(View.VISIBLE);
                 imagen7.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen7,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen8).equals("1")){
                 imageViewUrlMap.put(imagen8,imageViewUrlMap.get(imagen7));
@@ -485,11 +449,8 @@ public class juego1 extends AppCompatActivity {
                 imagen8.setVisibility(View.VISIBLE);
                 imagen7.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen7,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -519,11 +480,8 @@ public class juego1 extends AppCompatActivity {
                 imagen9.setVisibility(View.VISIBLE);
                 imagen8.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen8,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen7).equals("1")){
                 imageViewUrlMap.put(imagen7,imageViewUrlMap.get(imagen8));
@@ -531,11 +489,8 @@ public class juego1 extends AppCompatActivity {
                 imagen7.setVisibility(View.VISIBLE);
                 imagen8.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen8,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen5).equals("1")){
                 imageViewUrlMap.put(imagen5,imageViewUrlMap.get(imagen8));
@@ -543,11 +498,9 @@ public class juego1 extends AppCompatActivity {
                 imagen5.setVisibility(View.VISIBLE);
                 imagen8.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen8,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
+
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -577,11 +530,8 @@ public class juego1 extends AppCompatActivity {
                 imagen8.setVisibility(View.VISIBLE);
                 imagen9.setVisibility(View.INVISIBLE);
                 imageViewUrlMap.put(imagen9,"1");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen6).equals("1")){
                 Log.d("tmr","A");
@@ -595,12 +545,9 @@ public class juego1 extends AppCompatActivity {
                 Log.d("tmr","e");
                 imageViewUrlMap.put(imagen9,"1");
                 Log.d("tmr","f");
-                contadorjuego.getAndDecrement();
+                contadorjuego.getAndIncrement();
                 Log.d("tmr","g");
                 contador.setText(String.valueOf(contadorjuego.get()));
-                if(contadorjuego.get() == 0){
-                    contador.setText("perdiste");
-                }
             }
             if(imageViewUrlMap.get(imagen1).equals(Url1)
                     && imageViewUrlMap.get(imagen2).equals(Url2)
@@ -747,6 +694,128 @@ public class juego1 extends AppCompatActivity {
         imageViewUrlMap.put(imagen8, Url4);
         imageViewUrlMap.put(imagen9, Url8);
         TextView contador = findViewById(R.id.contador);
-        contador.setText("8");
+        contador.setText("0");
+    }
+    private void juego2(Map<ImageView, String> imageViewUrlMap){
+        ImageView imagen1 = findViewById(R.id.div0);
+        ImageView imagen2 = findViewById(R.id.div1);
+        ImageView imagen3 = findViewById(R.id.div2);
+        ImageView imagen4 = findViewById(R.id.div3);
+        ImageView imagen5 = findViewById(R.id.div4);
+        ImageView imagen6 = findViewById(R.id.div5);
+        ImageView imagen7 = findViewById(R.id.div6);
+        ImageView imagen8 = findViewById(R.id.div7);
+        ImageView imagen9 = findViewById(R.id.div8);
+        Picasso.get().load(Url1).into(imagen1);
+        Picasso.get().load(Url5).into(imagen2);
+        Picasso.get().load(Url2).into(imagen3);
+        Picasso.get().load(Url7).into(imagen4);
+        Picasso.get().load(Url4).into(imagen5);
+        Picasso.get().load(Url8).into(imagen7);
+        Picasso.get().load(Url3).into(imagen6);
+        Picasso.get().load(Url6).into(imagen9);
+        imageViewUrlMap.put(imagen1, Url1);
+        imageViewUrlMap.put(imagen2, Url5);
+        imageViewUrlMap.put(imagen3, Url2);
+        imageViewUrlMap.put(imagen4, Url7);
+        imageViewUrlMap.put(imagen5, Url4);
+        imageViewUrlMap.put(imagen6, Url3);
+        imageViewUrlMap.put(imagen7, Url8);
+        imageViewUrlMap.put(imagen8, "1");
+        imageViewUrlMap.put(imagen9, Url6);
+        TextView contador = findViewById(R.id.contador);
+        contador.setText("0");
+    }
+    private void juego3(Map<ImageView, String> imageViewUrlMap){
+        ImageView imagen1 = findViewById(R.id.div0);
+        ImageView imagen2 = findViewById(R.id.div1);
+        ImageView imagen3 = findViewById(R.id.div2);
+        ImageView imagen4 = findViewById(R.id.div3);
+        ImageView imagen5 = findViewById(R.id.div4);
+        ImageView imagen6 = findViewById(R.id.div5);
+        ImageView imagen7 = findViewById(R.id.div6);
+        ImageView imagen8 = findViewById(R.id.div7);
+        ImageView imagen9 = findViewById(R.id.div8);
+        Picasso.get().load(Url5).into(imagen1);
+        Picasso.get().load(Url8).into(imagen8);
+        Picasso.get().load(Url2).into(imagen3);
+        Picasso.get().load(Url1).into(imagen4);
+        Picasso.get().load(Url4).into(imagen5);
+        Picasso.get().load(Url7).into(imagen7);
+        Picasso.get().load(Url3).into(imagen6);
+        Picasso.get().load(Url6).into(imagen9);
+        imageViewUrlMap.put(imagen1, Url5);
+        imageViewUrlMap.put(imagen2, "1");
+        imageViewUrlMap.put(imagen3, Url2);
+        imageViewUrlMap.put(imagen4, Url1);
+        imageViewUrlMap.put(imagen5, Url4);
+        imageViewUrlMap.put(imagen6, Url3);
+        imageViewUrlMap.put(imagen7, Url7);
+        imageViewUrlMap.put(imagen8, Url8);
+        imageViewUrlMap.put(imagen9, Url6);
+        TextView contador = findViewById(R.id.contador);
+        contador.setText("0");
+    }
+
+    private void juego4(Map<ImageView, String> imageViewUrlMap){
+        ImageView imagen1 = findViewById(R.id.div0);
+        ImageView imagen2 = findViewById(R.id.div1);
+        ImageView imagen3 = findViewById(R.id.div2);
+        ImageView imagen4 = findViewById(R.id.div3);
+        ImageView imagen5 = findViewById(R.id.div4);
+        ImageView imagen6 = findViewById(R.id.div5);
+        ImageView imagen7 = findViewById(R.id.div6);
+        ImageView imagen8 = findViewById(R.id.div7);
+        ImageView imagen9 = findViewById(R.id.div8);
+        Picasso.get().load(Url8).into(imagen1);
+        Picasso.get().load(Url5).into(imagen8);
+        Picasso.get().load(Url2).into(imagen3);
+        Picasso.get().load(Url1).into(imagen4);
+        Picasso.get().load(Url4).into(imagen5);
+        Picasso.get().load(Url7).into(imagen7);
+        Picasso.get().load(Url3).into(imagen6);
+        Picasso.get().load(Url6).into(imagen9);
+        imageViewUrlMap.put(imagen1, Url8);
+        imageViewUrlMap.put(imagen2, "1");
+        imageViewUrlMap.put(imagen3, Url2);
+        imageViewUrlMap.put(imagen4, Url1);
+        imageViewUrlMap.put(imagen5, Url4);
+        imageViewUrlMap.put(imagen6, Url3);
+        imageViewUrlMap.put(imagen7, Url7);
+        imageViewUrlMap.put(imagen8, Url5);
+        imageViewUrlMap.put(imagen9, Url6);
+        TextView contador = findViewById(R.id.contador);
+        contador.setText("0");
+    }
+
+    private void juego5(Map<ImageView, String> imageViewUrlMap){
+        ImageView imagen1 = findViewById(R.id.div0);
+        ImageView imagen2 = findViewById(R.id.div1);
+        ImageView imagen3 = findViewById(R.id.div2);
+        ImageView imagen4 = findViewById(R.id.div3);
+        ImageView imagen5 = findViewById(R.id.div4);
+        ImageView imagen6 = findViewById(R.id.div5);
+        ImageView imagen7 = findViewById(R.id.div6);
+        ImageView imagen8 = findViewById(R.id.div7);
+        ImageView imagen9 = findViewById(R.id.div8);
+        Picasso.get().load(Url5).into(imagen1);
+        Picasso.get().load(Url8).into(imagen8);
+        Picasso.get().load(Url1).into(imagen3);
+        Picasso.get().load(Url2).into(imagen4);
+        Picasso.get().load(Url4).into(imagen5);
+        Picasso.get().load(Url7).into(imagen7);
+        Picasso.get().load(Url3).into(imagen6);
+        Picasso.get().load(Url6).into(imagen9);
+        imageViewUrlMap.put(imagen1, Url5);
+        imageViewUrlMap.put(imagen2, "1");
+        imageViewUrlMap.put(imagen3, Url1);
+        imageViewUrlMap.put(imagen4, Url2);
+        imageViewUrlMap.put(imagen5, Url4);
+        imageViewUrlMap.put(imagen6, Url3);
+        imageViewUrlMap.put(imagen7, Url7);
+        imageViewUrlMap.put(imagen8, Url8);
+        imageViewUrlMap.put(imagen9, Url6);
+        TextView contador = findViewById(R.id.contador);
+        contador.setText("0");
     }
 }
