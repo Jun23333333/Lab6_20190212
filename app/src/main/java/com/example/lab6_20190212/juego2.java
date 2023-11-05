@@ -58,28 +58,34 @@ public class juego2 extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
         Button agregar =findViewById(R.id.button6);
         ProgressBar progressBar= findViewById(R.id.progress_bar);
+        fotitos = new ArrayList<>();
+        Adaptador listaAdapter = new Adaptador(fotitos, this);
+        RecyclerView recyclerView = findViewById(R.id.fotito);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(listaAdapter);
+
+        // Establecer el listener para Firestore una sola vez, no cada vez que se haga clic
+        db.collection("segunda").addSnapshotListener((collection, error) -> {
+            if (error != null) {
+                Log.d("lectura", "Error listening for document changes.");
+                return;
+            }
+            if (collection != null && !collection.isEmpty()) {
+                fotitos.clear(); // Limpiar la lista antes de agregar los nuevos datos
+                for (QueryDocumentSnapshot document : collection) {
+                    foto foto = document.toObject(foto.class);
+                    fotitos.add(foto);
+                    Log.d("fotitos", foto.getUrl());
+                }
+                listaAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
+            }
+        });
+
+        // Listener para el botón de agregar
         agregar.setOnClickListener(view -> {
-            fotitos.clear();
-            uploadPhoto();
-            db.collection("segunda").addSnapshotListener((collection, error) -> {
-                if (error != null) {
-                    Log.d("lectura", "Error listening for document changes.");
-                    return;
-                }
-                if (collection != null && !collection.isEmpty()) {
-                    for (QueryDocumentSnapshot document : collection) {
-                        foto foto = document.toObject(foto.class);
-                        fotitos.add(foto);
-                        Log.d("fotitos",foto.getUrl());
-                    }
-                }
-            });
-            Adaptador listaAdapter = new Adaptador(fotitos,this);
-            RecyclerView recyclerView = findViewById(R.id.fotito);
-            recyclerView.setHasFixedSize(true);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-            recyclerView.setLayoutManager(layoutManager);
-            recyclerView.setAdapter(listaAdapter);
+            uploadPhoto(); // Esta función debería manejar la subida de fotos
         });
     }
 
