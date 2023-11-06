@@ -56,7 +56,7 @@ public class juego23 extends AppCompatActivity {
             Url3 = fotitos.get(2).getUrl();}else{
             Url1 = "https://firebasestorage.googleapis.com/v0/b/vertical-reason-402704.appspot.com/o/photos%2FIMG_1acc99da-9c4b-4fa3-b256-9360113d1801.jpg?alt=media&token=1a79f9ab-51ff-4e11-b52d-40d2552b01aa";
             Url2 = "https://firebasestorage.googleapis.com/v0/b/vertical-reason-402704.appspot.com/o/photos%2FIMG_077c47ce-b84e-4db7-9275-db2ca829397e.jpg?alt=media&token=db2919b8-a435-469e-a200-a7299dc9cefe";
-            Url3 = "https://firebasestorage.googleapis.com/v0/b/vertical-reason-402704.appspot.com/o/photos%2FIMG_61d72850-9a09-4b8c-9a16-9393118c9ffa.jpg?alt=media&token=e7948309-6b8b-461b-9d1b-c5d3edbe04d3";
+            Url3 = "https://firebasestorage.googleapis.com/v0/b/vertical-reason-402704.appspot.com/o/photos%2FIMG_077c47ce-b84e-4db7-9275-db2ca829397e.jpg?alt=media&token=db2919b8-a435-469e-a200-a7299dc9cefe";
         }
         Log.d("testeo","a");
         String Url_f = "https://firebasestorage.googleapis.com/v0/b/vertical-reason-402704.appspot.com/o/Snapshot_1.PNG?alt=media&token=dd44eeb8-1a56-46cd-b75b-9b4a506684b2&_gl=1*19vwuht*_ga*NzE2OTM3NDg2LjE2OTc4NTQxMTY.*_ga_CW55HF8NVT*MTY5OTIzMzAxOS45LjEuMTY5OTIzNDE0MS4xMi4wLjA.";
@@ -74,12 +74,12 @@ public class juego23 extends AppCompatActivity {
         Picasso.get().load(Url_f).into(ima6);
         Log.d("testeo","b");
         List<String> urlsTemporales = new ArrayList<>();
-        urlsTemporales.add(Url1);
-        urlsTemporales.add(Url1);
-        urlsTemporales.add(Url2);
-        urlsTemporales.add(Url2);
-        urlsTemporales.add(Url3);
-        urlsTemporales.add(Url3);
+        urlsTemporales.add(0,Url1);
+        urlsTemporales.add(1,Url1);
+        urlsTemporales.add(2,Url2);
+        urlsTemporales.add(3,Url2);
+        urlsTemporales.add(4,Url3);
+        urlsTemporales.add(5,Url3);
         TextView ganar = findViewById(R.id.textView2);
         Log.d("testeo","c");
         Collections.shuffle(urlsTemporales);
@@ -106,27 +106,27 @@ public class juego23 extends AppCompatActivity {
             Log.d("testeo",urlsMap.get(3));
             Log.d("testeo",urlsMap.get(4));
             vol.getAndIncrement();
-            if(ima1.getDrawable().equals(ima2.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(1))){
                 ima1.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima3.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(2))){
                 ima1.setVisibility(View.GONE);
                 ima3.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima4.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(3))){
                 ima1.setVisibility(View.GONE);
                 ima4.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima5.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(4))){
                 ima1.setVisibility(View.GONE);
                 ima5.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima6.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(5))){
                 ima1.setVisibility(View.GONE);
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();
@@ -148,27 +148,27 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(1)).into(ima2);
             vol.getAndIncrement();
-            if(ima2.getDrawable().equals(ima1.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(1))){
                 ima1.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima2.getDrawable().equals(ima3.getDrawable())){
+            if(urlsMap.get(1).equals(urlsMap.get(2))){
                 ima2.setVisibility(View.GONE);
                 ima3.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima2.getDrawable().equals(ima4.getDrawable())){
+            if(urlsMap.get(1).equals(urlsMap.get(3))){
                 ima1.setVisibility(View.GONE);
                 ima4.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima2.getDrawable().equals(ima5.getDrawable())){
+            if(urlsMap.get(1).equals(urlsMap.get(4))){
                 ima2.setVisibility(View.GONE);
                 ima5.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima2.getDrawable().equals(ima6.getDrawable())){
+            if(urlsMap.get(1).equals(urlsMap.get(5))){
                 ima2.setVisibility(View.GONE);
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();
@@ -190,27 +190,27 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(2)).into(ima3);
             vol.getAndIncrement();
-            if(ima3.getDrawable().equals(ima2.getDrawable())){
+            if(urlsMap.get(1).equals(urlsMap.get(2))){
                 ima3.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima3.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(2))){
                 ima1.setVisibility(View.GONE);
                 ima3.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima3.getDrawable().equals(ima4.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(2))){
                 ima3.setVisibility(View.GONE);
                 ima4.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima3.getDrawable().equals(ima5.getDrawable())){
+            if(urlsMap.get(4).equals(urlsMap.get(2))){
                 ima3.setVisibility(View.GONE);
                 ima5.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima3.getDrawable().equals(ima6.getDrawable())){
+            if(urlsMap.get(5).equals(urlsMap.get(2))){
                 ima3.setVisibility(View.GONE);
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();
@@ -233,27 +233,27 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(3)).into(ima4);
             vol.getAndIncrement();
-            if(ima4.getDrawable().equals(ima2.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(1))){
                 ima4.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima4.getDrawable().equals(ima3.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(2))){
                 ima4.setVisibility(View.GONE);
                 ima3.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima4.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(0))){
                 ima1.setVisibility(View.GONE);
                 ima4.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima4.getDrawable().equals(ima5.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(4))){
                 ima4.setVisibility(View.GONE);
                 ima5.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima4.getDrawable().equals(ima6.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(5))){
                 ima4.setVisibility(View.GONE);
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();
@@ -275,27 +275,27 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(4)).into(ima5);
             vol.getAndIncrement();
-            if(ima5.getDrawable().equals(ima2.getDrawable())){
+            if(urlsMap.get(1).equals(urlsMap.get(4))){
                 ima5.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima5.getDrawable().equals(ima3.getDrawable())){
+            if(urlsMap.get(2).equals(urlsMap.get(4))){
                 ima5.setVisibility(View.GONE);
                 ima3.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima5.getDrawable().equals(ima4.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(4))){
                 ima5.setVisibility(View.GONE);
                 ima4.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima5.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(4))){
                 ima1.setVisibility(View.GONE);
                 ima5.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima5.getDrawable().equals(ima6.getDrawable())){
+            if(urlsMap.get(5).equals(urlsMap.get(4))){
                 ima5.setVisibility(View.GONE);
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();
@@ -318,27 +318,27 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(5)).into(ima6);
             vol.getAndIncrement();
-            if(ima6.getDrawable().equals(ima2.getDrawable())){
+            if(urlsMap.get(1).equals(urlsMap.get(5))){
                 ima6.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima6.getDrawable().equals(ima3.getDrawable())){
+            if(urlsMap.get(2).equals(urlsMap.get(5))){
                 ima6.setVisibility(View.GONE);
                 ima3.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima6.getDrawable().equals(ima4.getDrawable())){
+            if(urlsMap.get(3).equals(urlsMap.get(5))){
                 ima6.setVisibility(View.GONE);
                 ima4.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima6.getDrawable().equals(ima5.getDrawable())){
+            if(urlsMap.get(4).equals(urlsMap.get(5))){
                 ima6.setVisibility(View.GONE);
                 ima5.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(ima1.getDrawable().equals(ima6.getDrawable())){
+            if(urlsMap.get(0).equals(urlsMap.get(5))){
                 ima1.setVisibility(View.GONE);
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();

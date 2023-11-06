@@ -10,60 +10,74 @@
         android:id="@+id/ima1"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/ima2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="76dp"
-        app:layout_constraintStart_toEndOf="@id/ima1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/ima3"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ima1"
-        tools:srcCompat="@tools:sample/avatars"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/ima4"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ima3"
-        app:layout_constraintTop_toBottomOf="@+id/ima2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.296"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/ima5"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ima3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/ima6"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/ima5"
-        app:layout_constraintTop_toBottomOf="@+id/ima4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
