@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -25,6 +26,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,12 +83,20 @@ public class juego2 extends AppCompatActivity {
                     Log.d("fotitos", foto.getUrl());
                 }
                 listaAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
+                TextView textView = findViewById(R.id.textView1);
+                textView.setText("Total de imagenes seleccionadas: "+fotitos.toArray().length);
             }
         });
 
         // Listener para el botón de agregar
         agregar.setOnClickListener(view -> {
             uploadPhoto(); // Esta función debería manejar la subida de fotos
+        });
+
+        Button jugar = findViewById(R.id.button7);
+        jugar.setOnClickListener(view -> {
+            Intent intent = new Intent(this, juego23.class);
+            startActivity(intent);
         });
     }
 
