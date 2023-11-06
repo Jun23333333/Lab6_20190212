@@ -106,6 +106,7 @@ public class juego23 extends AppCompatActivity {
             Log.d("testeo",urlsMap.get(3));
             Log.d("testeo",urlsMap.get(4));
             vol.getAndIncrement();
+            if(vol.get()==2){
             if(urlsMap.get(0).equals(urlsMap.get(1))){
                 ima1.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
@@ -130,7 +131,7 @@ public class juego23 extends AppCompatActivity {
                 ima1.setVisibility(View.GONE);
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();
-            }
+            }}
             if(gan.get()==3){
                 ganar.setVisibility(View.VISIBLE);
             }
@@ -148,6 +149,7 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(1)).into(ima2);
             vol.getAndIncrement();
+            if(vol.get()==2){
             if(urlsMap.get(0).equals(urlsMap.get(1))){
                 ima1.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
@@ -175,7 +177,7 @@ public class juego23 extends AppCompatActivity {
             }
             if(gan.get()==3){
                 ganar.setVisibility(View.VISIBLE);
-            }
+            }}
         });
 
         ima3.setOnClickListener(view -> {
@@ -190,6 +192,7 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(2)).into(ima3);
             vol.getAndIncrement();
+            if(vol.get()==2){
             if(urlsMap.get(1).equals(urlsMap.get(2))){
                 ima3.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
@@ -217,7 +220,7 @@ public class juego23 extends AppCompatActivity {
             }
             if(gan.get()==3){
                 ganar.setVisibility(View.VISIBLE);
-            }
+            }}
         });
 
 
@@ -233,6 +236,7 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(3)).into(ima4);
             vol.getAndIncrement();
+            if(vol.get()==2){
             if(urlsMap.get(3).equals(urlsMap.get(1))){
                 ima4.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
@@ -260,7 +264,7 @@ public class juego23 extends AppCompatActivity {
             }
             if(gan.get()==3){
                 ganar.setVisibility(View.VISIBLE);
-            }
+            }}
         });
 
         ima5.setOnClickListener(view -> {
@@ -275,6 +279,7 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(4)).into(ima5);
             vol.getAndIncrement();
+            if(vol.get()==2){
             if(urlsMap.get(1).equals(urlsMap.get(4))){
                 ima5.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
@@ -302,7 +307,7 @@ public class juego23 extends AppCompatActivity {
             }
             if(gan.get()==3){
                 ganar.setVisibility(View.VISIBLE);
-            }
+            }}
         });
 
 
@@ -318,6 +323,7 @@ public class juego23 extends AppCompatActivity {
             }
             Picasso.get().load(urlsMap.get(5)).into(ima6);
             vol.getAndIncrement();
+            if(vol.get()==2){
             if(urlsMap.get(1).equals(urlsMap.get(5))){
                 ima6.setVisibility(View.GONE);
                 ima2.setVisibility(View.GONE);
@@ -343,9 +349,9 @@ public class juego23 extends AppCompatActivity {
                 ima6.setVisibility(View.GONE);
                 gan.getAndIncrement();
             }
-            if(gan.get()==3){
+            if(gan.get()==18){
                 ganar.setVisibility(View.VISIBLE);
-            }
+            }}
         });
 
     }
